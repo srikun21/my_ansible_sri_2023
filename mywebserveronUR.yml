@@ -1,9 +1,9 @@
 ---
 - hosts: all
   become: yes
-  tasks:
-   - name: i wnat to install webserver on ubuntu node
+  tasks: 
+   - name: i want to install webserver on ubuntu node
      apt: 
       name: apache2
-      state: present 
+      state: present
      when: ansible_os_family =="Debian"
