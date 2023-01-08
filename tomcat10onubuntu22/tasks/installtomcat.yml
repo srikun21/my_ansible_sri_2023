@@ -1,16 +1,16 @@
 ---
-- name: download tomcat tar file 
+- name: download tomcat tar file
   get_url:
-    url:https: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
-    dest: /home/ubuntu/apache-tomcat-10.0.20.tar.gz 
-    force_basic_auth: yes 
+    url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
+    dest: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
+    force_basic_auth: yes
 
-- name: create tomcat folder 
-  file: 
-    path: /opt/tomcat 
-    state: directory 
+- name: create tomcat folder
+  file:
+     path: /opt/tomcat
+     state: directory
 
-- name: extract tar file  
+- name: extract tar file
   command: 
-      cmd: sudo tar xzvf apache-tomcat-10.0.20.tar.gz -C /opt/tomcat --strip-components=1 
-      creates: /opt/tomcat/LICENSE
+      cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
+      creates: /opt/tomcat/LICENSE 

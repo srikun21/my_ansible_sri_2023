@@ -1,5 +1,5 @@
---- 
-- hosts: all 
-  become: yes 
+---
+- hosts: myansiblenode
+  become: yes
   roles:
-  - {roles: mytomcat10onubuntu22, when: ansible_os_family=="Debian"  }
+  - {role: mytom8onubuntu16, when: ansible_os_family=="Debian" }
